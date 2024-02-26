@@ -78,17 +78,35 @@ export const Navbar = () => {
                     <ListItem button component={Link} to="/" onClick={handleMenuItemClick} className={classes.listItem}>
                         <ListItemText primary="Home" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/about" onClick={handleMenuItemClick} className={classes.listItem}>
-                        <ListItemText primary="About" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    <ListItem button component={Link} to="/partners" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="VET SOS Partner" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/skills" onClick={handleMenuItemClick} className={classes.listItem}>
-                        <ListItemText primary="Skills" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    <ListItem button component={Link} to="/bio" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Paula's Bio" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/projects" onClick={handleMenuItemClick} className={classes.listItem}>
-                        <ListItemText primary="Projects" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    <ListItem button component={Link} to="/trainers" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="VET SOS Trainers" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/camp" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Kids Summer Camp" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/tips" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Free Training Tips" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/private-training" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Private Training" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/calendar" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Calendar" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/food-bank" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Pet Food Bank" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                    </ListItem>
+                    <ListItem button component={Link} to="/help" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Ways to Help" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
                     <ListItem button component={Link} to="/contact" onClick={handleMenuItemClick} className={classes.listItem}>
-                        <ListItemText primary="Contact" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
+                        <ListItemText primary="Contact Us" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
                 </List>
             </Drawer>
