@@ -9,29 +9,36 @@ import ListItemText from '@mui/material/ListItemText';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: '#4A148C',
-        position: 'relative',
-    },
     menuButton: {
         position: 'absolute',
-        top: 0,
+        top: 25,
         left: 0,
         zIndex: 1,
         marginLeft: theme.spacing(2),
-        color: 'white',
-        backgroundColor: 'black', // Add this line to set the background color to black
+        color: 'black',
+        backgroundColor: 'transparent',
         '&:hover': {
-            backgroundColor: 'black', // Add this line to set the background color to black on hover
+            backgroundColor: '#EEDCE',
         },
     },
     drawerPaper: {
         width: 240,
         color: 'white',
-        backgroundColor: '#222B45',
+        backgroundColor: '#EEDDCE',
         opacity: 0.9,
         paddingTop: theme.spacing(4),
+    },
+    listItem: {
+        '&:hover': {
+            backgroundColor: '#F0EDEA', // Change the background color on hover
+        },
+    },
+    '@media (max-width: 500px)': {
+        menuButton: {
+            backgroundColor: 'transparent',
+            marginLeft: theme.spacing(-1),
+            opacity: 1,
+        },
     },
 }));
 
@@ -68,20 +75,20 @@ export const Navbar = () => {
                 }}
             >
                 <List>
-                    <ListItem button component={Link} to="/" onClick={handleMenuItemClick}>
-                        <ListItemText primary="Home" />
+                    <ListItem button component={Link} to="/" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Home" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/about" onClick={handleMenuItemClick}>
-                        <ListItemText primary="About" />
+                    <ListItem button component={Link} to="/about" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="About" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/skills" onClick={handleMenuItemClick}>
-                        <ListItemText primary="Skills" />
+                    <ListItem button component={Link} to="/skills" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Skills" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/projects" onClick={handleMenuItemClick}>
-                        <ListItemText primary="Projects" />
+                    <ListItem button component={Link} to="/projects" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Projects" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
-                    <ListItem button component={Link} to="/contact" onClick={handleMenuItemClick}>
-                        <ListItemText primary="Contact" />
+                    <ListItem button component={Link} to="/contact" onClick={handleMenuItemClick} className={classes.listItem}>
+                        <ListItemText primary="Contact" primaryTypographyProps={{ style: { color: '#B19D99' } }} />
                     </ListItem>
                 </List>
             </Drawer>
