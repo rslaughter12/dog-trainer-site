@@ -17,12 +17,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   media: {
-    width: '25%',
+    width: '15%', // Update the width to a smaller value
+    height: '15%', // Update the height to a smaller value
     borderRadius: '50%',
     marginRight: theme.spacing(2),
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
+    marginTop: theme.spacing(15),
   },
   content: {
     display: 'flex',
