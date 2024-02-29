@@ -119,8 +119,8 @@ const VetTrainers = () => {
             onClick={handleButtonClick}
           >
             {!showSecondCard
-              ? 'Want the long version?'
-              : 'Oops, that was too much!'}
+              ? 'See More Trainers!'
+              : 'See Less Trainers!'}
           </Button>
         </CardContent>
       </Card>
