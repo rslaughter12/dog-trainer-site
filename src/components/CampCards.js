@@ -6,6 +6,7 @@ import {
   CardMedia,
   Typography,
   Grid,
+  Container,
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -13,6 +14,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
     margin: 10,
     backgroundColor: '#EEDDCE',
+    marginTop: 40,
   },
   media: {
     height: 140,
@@ -84,27 +86,36 @@ const CampCards = () => {
   ];
 
   return (
-    <Grid container spacing={3}>
-      {cardsData.map((card) => (
-        <Grid key={card.id} item xs={12} sm={6} md={4}>
-          <Card className={classes.root}>
-            <CardMedia
-              className={classes.media}
-              image={card.imageUrl}
-              title={card.heading}
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                {card.heading}
-              </Typography>
-              <Typography variant='body2' color='black' component='p' className={classes.text}>
-                {card.text}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <Container maxWidth='lg'>
+      {' '}
+      {/* Wrap with Container and set maxWidth */}
+      <Grid container spacing={10} justify='center' >
+        {cardsData.map((card) => (
+          <Grid key={card.id} item xs={12} sm={6} md={4}>
+            <Card className={classes.root}>
+              <CardMedia
+                className={classes.media}
+                image={card.imageUrl}
+                title={card.heading}
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  {card.heading}
+                </Typography>
+                <Typography
+                  variant='body2'
+                  color='black'
+                  component='p'
+                  className={classes.text}
+                >
+                  {card.text}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 
