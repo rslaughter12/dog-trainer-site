@@ -10,6 +10,7 @@ const Trainers= () => {
         <div>
         <Banner />
         <VetTrainers />
+
         </div>
     );
     };
